@@ -221,7 +221,6 @@ public class Inventory : MonoBehaviour
                     case ConsumableType.Book:
                         // 여기서 팝업 실행.
                         UIManager.Instance.OpenPopUp_Book(selectedItem.item);
-                        Debug.Log($"{selectedItem.item.displayName}, {selectedItem.item.consumables[i].content}");
                         break;
                 }
             }
