@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour , IInteractable
 {
     Animator DoorAnim;
 
@@ -14,9 +15,23 @@ public class Door : MonoBehaviour
         DoorAnim = GetComponent<Animator>();
     }
 
-    private void Start()
+    public string GetInteractPrompt()
     {
-        
+        if (DoorLock == true)
+            return $"문이 잠겨있습니다";
+        else
+        {
+            if(DoorState == true)
+                return $"문 닫기";
+            else
+                return $"문 열기";
+        }
+    }
+
+    public void OnInteract()
+    {
+        Debug.Log("누름");
+        InteractDoor();
     }
 
     public void InteractDoor()
