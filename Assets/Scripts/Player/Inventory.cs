@@ -183,7 +183,7 @@ public class Inventory : MonoBehaviour
         selectedItemStatNames.text = string.Empty;
         selectedItemStatValues.text = string.Empty;
 
-        for (int i = 0; i < selectedItem.item.consumables.Length; i++)
+        for (int i = 0; i < selectedItem.item.consumables.Length; i++) // 책 내용 보여지는거는 이 부분 수정
         {
             selectedItemStatNames.text += selectedItem.item.consumables[i].type.ToString() + "\n";
             selectedItemStatValues.text += selectedItem.item.consumables[i].content.ToString() + "\n";

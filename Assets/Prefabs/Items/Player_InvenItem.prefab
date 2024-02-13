@@ -203,7 +203,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   testitems:
-  - {fileID: 11400000, guid: 208970412e6860441bd0be0042b1c5db, type: 2}
   - {fileID: 11400000, guid: 125e78ca54747dd4687d48a45cc7cd03, type: 2}
   - {fileID: 11400000, guid: 1c2ad452d2f0d484b965224ab3a8f337, type: 2}
   - {fileID: 11400000, guid: 35feeaf151276f944964651acfd81871, type: 2}

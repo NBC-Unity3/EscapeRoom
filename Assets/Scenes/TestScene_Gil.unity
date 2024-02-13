@@ -371,10 +371,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2646048660835224245}
     - target: {fileID: 6753683685630887339, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
-      propertyPath: testitems.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753683685630887339, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
       propertyPath: selectedItemStatNames
       value: 
       objectReference: {fileID: 5162416820668781516}
@@ -450,18 +446,6 @@ PrefabInstance:
       propertyPath: selectedItemDescription
       value: 
       objectReference: {fileID: 1997220096417259841}
-    - target: {fileID: 6753683685630887339, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
-      propertyPath: testitems.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 125e78ca54747dd4687d48a45cc7cd03, type: 2}
-    - target: {fileID: 6753683685630887339, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
-      propertyPath: testitems.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1c2ad452d2f0d484b965224ab3a8f337, type: 2}
-    - target: {fileID: 6753683685630887339, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
-      propertyPath: testitems.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 35feeaf151276f944964651acfd81871, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
