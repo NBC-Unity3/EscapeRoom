@@ -8,7 +8,7 @@ public class ItemObject : MonoBehaviour, IInteractable
 
     public string GetInteractPrompt()
     {
-        return $"Pickup {item.displayName}";
+        return $"{item.displayName}";
     }
 
     public void OnInteract()
