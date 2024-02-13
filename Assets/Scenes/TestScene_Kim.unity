@@ -5884,6 +5884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book_PopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 6341995765301470387, guid: 7f8a370a68703fb44875fbcc507b79e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

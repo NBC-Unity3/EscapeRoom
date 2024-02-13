@@ -298,6 +298,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: c689b31ee89b9814aa7e7e3d914a68f5, type: 3}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: de4ca3a1-98d7-4de5-8ef5-a7b803110d2a
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 61a8fa72-2b22-40aa-99ff-ebe769fd85ef
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 1e1fc8cb-df95-4031-94dc-1269f5906c48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 29bbecde-6ce3-42eb-b448-d98fcb1cc080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: c3af33a4-e663-4a32-a1f9-937329fb0b91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/Jump[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player/Inventory[/Keyboard/tab]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Player/Look[/Mouse/delta]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Player/Interaction[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1530253824}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInventoryButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Inventory, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998294053845143180, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2077219793760538049, guid: 9aa43593eb1851c4298def525b09e314, type: 3}
       propertyPath: m_Name
       value: Player_Inven/Item
