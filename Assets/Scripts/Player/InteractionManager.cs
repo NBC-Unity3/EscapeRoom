@@ -67,19 +67,16 @@ public class InteractionManager : MonoBehaviour
         {
             if (equipManager.curEquip == null)
             {
-                curInteractable.OnInteract();
-                curInteractable = null;
-                curInteractGameobject = null;
-                prompText.gameObject.SetActive(false);
+                curInteractable.OnInteract(0);
             }
-            else if (equipManager.curEquip.tag == "Key")
+            else if (equipManager.curEquip.tag == "DoorKey")
             {
-                curInteractable.OnInteractWithKey();
-                equipManager.UnEquip();
-                curInteractable = null;
-                curInteractGameobject = null;
-                prompText.gameObject.SetActive(false);
+                curInteractable.OnInteract(1);
             }
+
+            curInteractable = null;
+            curInteractGameobject = null;
+            prompText.gameObject.SetActive(false);
         }
     }
 }

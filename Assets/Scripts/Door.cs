@@ -28,17 +28,19 @@ public class Door : MonoBehaviour , IInteractable
         }
     }
 
-    public void OnInteract()
+    public void OnInteract(int type)
     {
-        InteractDoor();
-    }
-
-    public void OnInteractWithKey()
-    {
-        if(DoorLock == true)
-            UnLockDoor();
-        else
-            OnInteract();
+        if (type == 0) // 빈손 상호작용
+        {
+            InteractDoor();
+        }
+        else if (type == 1) // DoorKey 상호작용
+        {
+            if (DoorLock == true)
+                UnLockDoor();
+            else
+                InteractDoor();
+        }
     }
 
     public void InteractDoor()

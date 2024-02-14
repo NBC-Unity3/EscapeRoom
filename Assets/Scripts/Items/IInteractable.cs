@@ -5,6 +5,5 @@ using UnityEngine;
 public interface IInteractable
 {
     string GetInteractPrompt();
-    void OnInteract();
-    void OnInteractWithKey();
+    void OnInteract(int type);
 }

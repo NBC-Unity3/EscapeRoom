@@ -11,7 +11,7 @@ public class ItemObject : MonoBehaviour, IInteractable
         return $"{item.displayName}";
     }
 
-    public void OnInteract()
+    public void OnInteract(int type)
     {
         Inventory.instance.AddItem(item);
         Destroy(gameObject);
