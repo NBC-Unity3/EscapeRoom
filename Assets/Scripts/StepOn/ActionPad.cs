@@ -5,7 +5,6 @@ public class ActionPad : Pad_Base
 {
     public int index;
 
-
     protected override void Press()
     {
         base.Press();
