@@ -5,6 +5,8 @@ using static UnityEditor.Progress;
 
 public class Door : MonoBehaviour , IInteractable
 {
+    public EquipManager equipmanager;
+
     Animator DoorAnim;
 
     public bool DoorState = false;
@@ -12,6 +14,7 @@ public class Door : MonoBehaviour , IInteractable
 
     private void Awake()
     {
+        equipmanager = GameObject.Find("Player").GetComponent<EquipManager>();
         DoorAnim = GetComponent<Animator>();
     }
 
@@ -28,38 +31,32 @@ public class Door : MonoBehaviour , IInteractable
         }
     }
 
-    public void OnInteract(int type)
+    public void OnInteract()
     {
-        if (type == 0) // 빈손 상호작용
+        if (equipmanager.curEquip == null)
         {
             InteractDoor();
         }
-        else if (type == 1) // DoorKey 상호작용
+        else if (equipmanager.curEquip.tag == "DoorKey") // DoorKey 상호작용
         {
             if (DoorLock == true)
                 UnLockDoor();
             else
                 InteractDoor();
         }
+        else
+            InteractDoor();
     }
 
     public void InteractDoor()
     {
         if(DoorLock == true)
-        {
             return;
-        }
         else
-        {
             if(DoorState == true)
-            {
                 CloseDoor();
-            }
             else
-            {
                 OpenDoor();
-            }
-        }
     }
 
     public void OpenDoor()

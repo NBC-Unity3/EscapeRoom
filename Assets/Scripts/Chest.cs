@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
+    public EquipManager equipmanager;
+
     Animator ChestAnim;
 
     public bool ChestState = false;
@@ -11,6 +13,7 @@ public class Chest : MonoBehaviour, IInteractable
 
     private void Awake()
     {
+        equipmanager = GameObject.Find("Player").GetComponent<EquipManager>();
         ChestAnim = GetComponent<Animator>();
     }
 
@@ -28,31 +31,29 @@ public class Chest : MonoBehaviour, IInteractable
 
     }
 
-    public void OnInteract(int type)
+    public void OnInteract()
     {
-        if (type == 0) // 빈손 상호작용
+        if (equipmanager.curEquip == null)
         {
             InteractChest();
         }
-        else if (type == 2) // ChestKey 상호작용
+        else if (equipmanager.curEquip.tag == "ChestKey") // ChestKey 상호작용
         {
             if (ChestLock == true)
                 UnLockChest();
             else
                 InteractChest();
         }
+        else
+            InteractChest();
     }
 
     public void InteractChest()
     {
         if (ChestLock == true)
-        {
             return;
-        }
         else
-        {
             OpenChest();
-        }
     }
 
     public void OpenChest()
