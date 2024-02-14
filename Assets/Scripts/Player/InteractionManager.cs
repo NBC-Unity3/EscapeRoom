@@ -73,6 +73,10 @@ public class InteractionManager : MonoBehaviour
             {
                 curInteractable.OnInteract(1);
             }
+            else if (equipManager.curEquip.tag == "ChestKey")
+            {
+                curInteractable.OnInteract(2);
+            }
 
             curInteractable = null;
             curInteractGameobject = null;
