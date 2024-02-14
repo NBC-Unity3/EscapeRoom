@@ -24,6 +24,22 @@ public class Settings : MonoBehaviour
     private void Start()
     {
         Init();
+        bgmSlider.onValueChanged.AddListener(SetValueBGM);
+        seSlider.onValueChanged.AddListener(SetValueSE);
+        mouseSlider.onValueChanged.AddListener(SetValueMouse);
+    }
+
+    private void SetValueBGM(float _value)
+    {
+        SettingManager.Instance.volumBGM = bgmSlider.value;
+    }
+    private void SetValueSE(float _value)
+    {
+        SettingManager.Instance.volumSE = seSlider.value;
+    }
+    private void SetValueMouse(float _value)
+    {
+        SettingManager.Instance.mouseSensitivity = mouseSlider.value;
     }
 
     public void OnClickExitButton()
