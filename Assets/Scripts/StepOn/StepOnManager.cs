@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,10 +9,12 @@ public class StepOnManager : MonoBehaviour
 {   
     public static StepOnManager instance;
     GameObject padGroup;
-    Pad[] pads;
+    ActionPad[] pads;
 
     Queue<int> solutionKey;
     Queue<int> inputKey;
+
+    bool isClear = false;
 
     private void Awake()
     {
@@ -24,10 +27,12 @@ public class StepOnManager : MonoBehaviour
     {
         instance = this;
         padGroup = GameObject.Find("PadGroup");
-        pads = padGroup.GetComponentsInChildren<Pad>();
+        pads = padGroup.GetComponentsInChildren<ActionPad>();
         for(int i = 0; i < pads.Length; i++)
         {
             pads[i].index = i;
+            // pad의 개수가 5개가 넘어가면 색상 추가해줘야함. 혹은 i % globalColors.Length 써서 5개 반복
+            pads[i].color = StepOn_CommonData.globalColors[i]; 
         }
         solutionKey = Shuffle(pads.Length);
 
@@ -63,7 +68,7 @@ public class StepOnManager : MonoBehaviour
         return solutionKey.Count == inputKey.Count;
     }
 
-    bool CompareKey() // 여기서 정답 확인 후 열쇠같은거 지급하는 메소드 부르면 될듯
+    bool CompareKey()
     {
         Queue<int> checkQueue = new Queue<int>(solutionKey);
         while (checkQueue.Count > 0)
@@ -75,7 +80,7 @@ public class StepOnManager : MonoBehaviour
                 return false;
             }
         }
-        Debug.Log("compare is true!!");
+        Debug.Log("compare is true!!"); // 정답 시 호출할 메소드 자리
         return true;
     }
 
@@ -87,5 +92,20 @@ public class StepOnManager : MonoBehaviour
         }
 
         inputKey.Clear();
+    }
+
+    public IEnumerator Hint()
+    {
+        Queue<int> q = new Queue<int>(solutionKey);
+        WaitForSeconds delay = new WaitForSeconds(.3f);
+
+        ResetPads();
+        yield return new WaitForSeconds(1);
+
+        while (q.Count > 0)
+        {
+            pads[q.Dequeue()].ShowColor();
+            yield return delay;
+        }
     }
 }
