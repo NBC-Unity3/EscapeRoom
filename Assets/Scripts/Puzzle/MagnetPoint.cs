@@ -19,8 +19,11 @@ public class MagnetPoint : MonoBehaviour
     {
         foreach (Rigidbody rbMagnet in rbMagnets)
         {
-            rbMagnet.velocity = Vector3.zero;
-            rbMagnet.AddForce((magnetPoint.position - rbMagnet.position) * forceFactor * Time.fixedDeltaTime); 
+            if (rbMagnet != null)
+            {
+                rbMagnet.velocity = Vector3.zero;
+                rbMagnet.AddForce((magnetPoint.position - rbMagnet.position) * forceFactor * Time.fixedDeltaTime);
+            }
         }
     }
 
