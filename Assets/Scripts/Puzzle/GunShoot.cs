@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEditor.Progress;
 using static UnityEngine.ParticleSystem;
 
 public class GunShoot : MonoBehaviour
@@ -9,6 +11,8 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private GameObject pivot;
     [SerializeField] private ParticleSystem fireParticle;
     Camera camera;
+
+    Target target;
 
     private float range = 50f;
 
@@ -26,15 +30,23 @@ public class GunShoot : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, range))
             {
+                // 오브젝트 닿는 위치에 파티클
                 if (hit.collider.gameObject != null)
                 {
                     Vector3 pos = hit.point;
-                    Debug.Log(hit.collider.gameObject);
                     CreateImpactParticleAtPosition(pos);
                 }
+                // 과녁에 닿으면 열쇠 드랍
                 if (hit.collider.gameObject.CompareTag("Target"))
                 {
                     Debug.Log("target");
+                    // todo
+                    target = hit.collider.gameObject.GetComponent<Target>();
+                    if (!target.isDropKey)
+                    {
+                        target.isDropKey = true;
+                        target.DropTargetKey();
+                    }
                 }
             }
 
