@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class InteractionManager : MonoBehaviour
 {
+    EquipManager equipManager;
+
     public float checkRate = .05f;
     float lastCheckTime;
     public float maxCheckDistance;
@@ -21,6 +23,7 @@ public class InteractionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        equipManager = GetComponent<EquipManager>();
         camera = Camera.main;
     }
 
@@ -62,10 +65,21 @@ public class InteractionManager : MonoBehaviour
     {
         if(callbaackContext.phase == InputActionPhase.Started && curInteractable != null)
         {
-            curInteractable.OnInteract();
-            curInteractable = null;
-            curInteractGameobject = null;
-            prompText.gameObject.SetActive(false);
+            if (equipManager.curEquip == null)
+            {
+                curInteractable.OnInteract();
+                curInteractable = null;
+                curInteractGameobject = null;
+                prompText.gameObject.SetActive(false);
+            }
+            else if (equipManager.curEquip.tag == "Key")
+            {
+                curInteractable.OnInteractWithKey();
+                equipManager.UnEquip();
+                curInteractable = null;
+                curInteractGameobject = null;
+                prompText.gameObject.SetActive(false);
+            }
         }
     }
 }

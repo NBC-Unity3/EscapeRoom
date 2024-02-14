@@ -30,8 +30,15 @@ public class Door : MonoBehaviour , IInteractable
 
     public void OnInteract()
     {
-        Debug.Log("´©¸§");
         InteractDoor();
+    }
+
+    public void OnInteractWithKey()
+    {
+        if(DoorLock == true)
+            UnLockDoor();
+        else
+            OnInteract();
     }
 
     public void InteractDoor()
@@ -63,5 +70,10 @@ public class Door : MonoBehaviour , IInteractable
     {
         DoorAnim.SetBool("IsOpen", false);
         DoorState = false;
+    }
+
+    public void UnLockDoor()
+    {
+        DoorLock = false;
     }
 }
