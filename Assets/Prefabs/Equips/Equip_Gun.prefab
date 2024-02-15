@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 5711608880342074659}
   fireParticle: {fileID: 2207796976756955392}
-  keyPrefab: {fileID: 374289202576707483, guid: f5417eb33f3c5264b857375669a80a2a, type: 3}
+  shootingClip: {fileID: 8300000, guid: 4b66f0c5f1c594a6e9d91b86f719108c, type: 3}
 --- !u!1 &5262375382521840783
 GameObject:
   m_ObjectHideFlags: 0
