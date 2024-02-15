@@ -122,3 +122,4 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   moveType: 1
   moveDirecion: -1
+  hintClip: {fileID: 8300000, guid: 34f5e691fc0922f42af02baf7bf21450, type: 3}

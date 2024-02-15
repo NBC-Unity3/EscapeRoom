@@ -16,6 +16,8 @@ public class GunShoot : MonoBehaviour
 
     private float range = 50f;
 
+    public AudioClip shootingClip;
+
     private void Awake()
     {
         camera = Camera.main;
@@ -26,6 +28,11 @@ public class GunShoot : MonoBehaviour
         // ¸¶¿ì½º ÁÂÅ¬¸¯(0)
         if (Input.GetMouseButtonDown(0))
         {
+            if (shootingClip)
+            {
+                SettingManager.PlayClip(shootingClip);
+            }
+
             Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, range))
@@ -39,8 +46,6 @@ public class GunShoot : MonoBehaviour
                 // °ú³á¿¡ ´êÀ¸¸é ¿­¼è µå¶ø
                 if (hit.collider.gameObject.CompareTag("Target"))
                 {
-                    Debug.Log("target");
-                    // todo
                     target = hit.collider.gameObject.GetComponent<Target>();
                     if (!target.isDropKey)
                     {

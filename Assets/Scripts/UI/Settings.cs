@@ -32,6 +32,7 @@ public class Settings : MonoBehaviour
     private void SetValueBGM(float _value)
     {
         SettingManager.Instance.volumBGM = bgmSlider.value;
+        SettingManager.Instance.VolumSet();
     }
     private void SetValueSE(float _value)
     {

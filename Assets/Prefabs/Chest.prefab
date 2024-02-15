@@ -40,7 +40,7 @@ Transform:
   m_Children:
   - {fileID: 5989427825709121476}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2142245343819053679
 MeshFilter:
@@ -125,8 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cc89edec6b4564fb1385d5031ea2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipmanager: {fileID: 0}
   ChestState: 0
   ChestLock: 1
+  openClip: {fileID: 8300000, guid: 4b66f0c5f1c594a6e9d91b86f719108c, type: 3}
+  lockedClip: {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
+  unlockClip: {fileID: 8300000, guid: dd532fdb2a61e4cc5bc727f3b32a69a8, type: 3}
 --- !u!54 &7532846034557982808
 Rigidbody:
   m_ObjectHideFlags: 0
