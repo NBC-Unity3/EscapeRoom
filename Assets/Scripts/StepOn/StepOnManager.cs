@@ -65,7 +65,7 @@ public class StepOnManager : MonoBehaviour
         Debug.Log($"EnQueue {index} ");
 
         if (CompareCount())
-            CompareKey();
+            isClear = CompareKey();
     }
 
     bool CompareCount()
@@ -109,6 +109,9 @@ public class StepOnManager : MonoBehaviour
 
     public IEnumerator Hint()
     {
+        if (isClear)
+            yield break;
+
         Queue<int> q = new Queue<int>(solutionKey);
         WaitForSeconds delay = new WaitForSeconds(.3f);
 
