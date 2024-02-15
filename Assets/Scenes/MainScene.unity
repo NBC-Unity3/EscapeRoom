@@ -1440,6 +1440,14 @@ PrefabInstance:
       propertyPath: keyPrefab
       value: 
       objectReference: {fileID: 374289202576707483, guid: 8d4d27ad2005fe944a3c7d50d405182b, type: 3}
+    - target: {fileID: 711424781467667631, guid: b90dbb98416ada54393d6b87aa687060, type: 3}
+      propertyPath: wrongClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fa066afdc1c5fc9418d571a04ae9da56, type: 3}
+    - target: {fileID: 711424781467667631, guid: b90dbb98416ada54393d6b87aa687060, type: 3}
+      propertyPath: correctClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 10cbab9099ecac14fb3b32f3cbf8ca5e, type: 3}
     - target: {fileID: 6574500597366411879, guid: b90dbb98416ada54393d6b87aa687060, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3134,7 +3142,6 @@ MonoBehaviour:
   cameraContainer: {fileID: 981559366}
   minXLook: -85
   maxXLook: 85
-  lookSensitivity: 0.2
   canLook: 1
 --- !u!4 &681620620
 Transform:
@@ -3194,6 +3201,7 @@ MonoBehaviour:
   equipButton: {fileID: 909254180}
   unEquipButton: {fileID: 2007748706}
   dropButton: {fileID: 1180639464}
+  bookClip: {fileID: 8300000, guid: f4c4856d22a1ec94b9c9d9415e62e709, type: 3}
   onOpenInventory:
     m_PersistentCalls:
       m_Calls: []

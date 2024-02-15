@@ -37,6 +37,8 @@ public class Inventory : MonoBehaviour
 
     private int curEquipIndex;
 
+    public AudioClip bookClip;
+
     private PlayerController controller;
     //private PlayerConditions condition;
 
@@ -219,7 +221,10 @@ public class Inventory : MonoBehaviour
                 switch (selectedItem.item.consumables[i].type)
                 {
                     case ConsumableType.Book:
-                        // 여기서 팝업 실행.
+                        if (bookClip)
+                        {
+                            SettingManager.PlayClip(bookClip);
+                        }
                         UIManager.Instance.OpenPopUp_Book(selectedItem.item);
                         break;
                 }

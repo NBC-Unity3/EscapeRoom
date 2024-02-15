@@ -6,6 +6,8 @@ public class EndingTrigger : MonoBehaviour
 {
     LayerMask playerLayer;
 
+    public AudioClip endingClip;
+
     private void Awake()
     {
         playerLayer = LayerMask.NameToLayer("Player");
@@ -15,6 +17,10 @@ public class EndingTrigger : MonoBehaviour
     {
         if (other.gameObject.layer == playerLayer)
         {
+            if (endingClip)
+            {
+                SettingManager.PlayClip(endingClip);
+            }
             GameManager.Instance.Ending();
         }
     }
