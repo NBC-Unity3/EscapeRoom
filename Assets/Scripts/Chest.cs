@@ -11,6 +11,10 @@ public class Chest : MonoBehaviour, IInteractable
     public bool ChestState = false;
     public bool ChestLock = true;
 
+    public AudioClip openClip;
+    public AudioClip lockedClip;
+    public AudioClip unlockClip;
+
     private void Awake()
     {
         equipmanager = GameObject.Find("Player").GetComponent<EquipManager>();
@@ -51,19 +55,34 @@ public class Chest : MonoBehaviour, IInteractable
     public void InteractChest()
     {
         if (ChestLock == true)
+        {
+            if (lockedClip)
+            {
+                SettingManager.PlayClip(lockedClip);
+            }
             return;
+        }
+            
         else
             OpenChest();
     }
 
     public void OpenChest()
     {
+        if (openClip)
+        {
+            SettingManager.PlayClip(openClip);
+        }
         ChestAnim.SetBool("ChestOpen", true);
         ChestState = true;
     }
 
     public void UnLockChest()
     {
+        if (unlockClip)
+        {
+            SettingManager.PlayClip(unlockClip);
+        }
         ChestLock = false;
     }
 }

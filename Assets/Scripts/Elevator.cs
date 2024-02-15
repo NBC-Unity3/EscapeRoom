@@ -9,6 +9,10 @@ public class Elevator : MonoBehaviour, IInteractable
     public bool ElevatorDoorState = true;
     public int ElevatorFloor = 1;
 
+    public AudioClip elevatorClip;
+    public AudioClip elevatorCloseClip;
+    public AudioClip elevatorOpenClip;
+
     private void Awake()
     {
         ElevatorAnim = GetComponent<Animator>();
@@ -50,24 +54,40 @@ public class Elevator : MonoBehaviour, IInteractable
 
     public void OpenDoor()
     {
+        if (elevatorOpenClip)
+        {
+            SettingManager.PlayClip(elevatorOpenClip);
+        }
         ElevatorAnim.SetBool("DoorOpen", true);
         ElevatorDoorState = true;
     }
 
     public void CloseDoor()
     {
+        if (elevatorCloseClip)
+        {
+            SettingManager.PlayClip(elevatorCloseClip);
+        }
         ElevatorAnim.SetBool("DoorOpen", false);
         ElevatorDoorState = false;
     }
 
     public void Moving1F()
     {
+        if (elevatorClip)
+        {
+            SettingManager.PlayClip(elevatorClip);
+        }
         ElevatorAnim.SetBool("Move1F", true);
         ElevatorFloor = 1;
     }
 
     public void Moving2F()
     {
+        if (elevatorClip)
+        {
+            SettingManager.PlayClip(elevatorClip);
+        }
         ElevatorAnim.SetBool("Move2F", true);
         ElevatorFloor = 2;
     }

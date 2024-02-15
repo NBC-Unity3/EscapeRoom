@@ -12,6 +12,11 @@ public class Door : MonoBehaviour , IInteractable
     public bool DoorState = false;
     public bool DoorLock = true;
 
+    public AudioClip openClip;
+    public AudioClip closeClip;
+    public AudioClip lockedClip;
+    public AudioClip unlockClip;
+
     private void Awake()
     {
         equipmanager = GameObject.Find("Player").GetComponent<EquipManager>();
@@ -51,7 +56,13 @@ public class Door : MonoBehaviour , IInteractable
     public void InteractDoor()
     {
         if(DoorLock == true)
+        {
+            if (lockedClip)
+            {
+                SettingManager.PlayClip(lockedClip);
+            }
             return;
+        }
         else
             if(DoorState == true)
                 CloseDoor();
@@ -61,18 +72,30 @@ public class Door : MonoBehaviour , IInteractable
 
     public void OpenDoor()
     {
+        if (openClip)
+        {
+            SettingManager.PlayClip(openClip);
+        }
         DoorAnim.SetBool("IsOpen", true);
         DoorState = true;
     }
 
     public void CloseDoor()
     {
+        if (closeClip)
+        {
+            SettingManager.PlayClip(closeClip);
+        }
         DoorAnim.SetBool("IsOpen", false);
         DoorState = false;
     }
 
     public void UnLockDoor()
     {
+        if (unlockClip)
+        {
+            SettingManager.PlayClip(unlockClip);
+        }
         DoorLock = false;
     }
 }

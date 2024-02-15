@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public float minXLook;
     public float maxXLook;
     private float camCurXRot;
-    public float lookSensitivity;
     private Vector2 mouseDelta;
 
     [HideInInspector]
@@ -61,11 +60,11 @@ public class PlayerController : MonoBehaviour
 
     void CameraLook()
     {
-        camCurXRot += mouseDelta.y * lookSensitivity;
+        camCurXRot += mouseDelta.y * SettingManager.Instance.mouseSensitivity;
         camCurXRot = Mathf.Clamp(camCurXRot, minXLook, maxXLook);
         cameraContainer.localEulerAngles = new Vector3(-camCurXRot, 0, 0);
 
-        transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0);
+        transform.eulerAngles += new Vector3(0, mouseDelta.x * SettingManager.Instance.mouseSensitivity, 0);
 
     }
 

@@ -9,7 +9,7 @@ public class Title : MonoBehaviour
 
     public void OnClickStart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Test_Choi");
     }
 
     public void OnClickSettings()
