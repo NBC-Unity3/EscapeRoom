@@ -10,6 +10,9 @@ public class DoubleDoor : MonoBehaviour, IInteractable
     public bool isLocked = true;
     public bool IsOpen = false;
 
+    public AudioClip openClip;
+    public AudioClip closeClip;
+    public AudioClip unlockClip;
 
     void Awake()
     {
@@ -39,6 +42,10 @@ public class DoubleDoor : MonoBehaviour, IInteractable
 
     public void UnLock()
     {
+        if (unlockClip)
+        {
+            SettingManager.PlayClip(unlockClip);
+        }
         doorLock.SetActive(false);
         PlayerController.instance.ToggleCursor(false);
         isLocked = false;
@@ -48,11 +55,19 @@ public class DoubleDoor : MonoBehaviour, IInteractable
     {
         if (IsOpen)
         {
+            if (openClip)
+            {
+                SettingManager.PlayClip(openClip);
+            }
             IsOpen = false;
             anim.SetBool("IsOpen", false);
         }
         else
         {
+            if (closeClip)
+            {
+                SettingManager.PlayClip(closeClip);
+            }
             IsOpen = true;
             anim.SetBool("IsOpen", true);
         }

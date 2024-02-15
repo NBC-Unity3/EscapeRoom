@@ -7,11 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
-    guid: d6f47915d56c5ae4084a140670173489
+    guid: 9502f2000f8a895458656176cfc90aa8
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
-    guid: 9b4f3d67a85e5d541be0c22436341a37
+    guid: aa93c80ae815c2840b4f7a363a340db0
   - enabled: 1
-    path: Assets/Scenes/Develop Scenes/Choi/Test_Choi.unity
-    guid: 464c4c9c3662ddb4d9467b3f074020e1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 3d80e3bbca628944a8f4291871334062
   m_configObjects: {}

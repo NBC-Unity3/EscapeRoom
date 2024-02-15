@@ -22,5 +22,5 @@ MonoBehaviour:
   maxStackAmount: 0
   consumables:
   - type: 0
-    content: Sample Book Content
+    content: "\uB3C4\uC5B4\uB77D\uC758 \uBE44\uBC00\uBC88\uD638\uB294 1212\uC785\uB2C8\uB2E4."
   equipPrefab: {fileID: 1589879187428485215, guid: 71422dc33c0f68e47a10518c3923430f, type: 3}
