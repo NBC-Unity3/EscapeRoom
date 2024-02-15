@@ -8420,6 +8420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 6571918005317929930, guid: 65a8e22ace0329b4883245a0e4e7e6f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
