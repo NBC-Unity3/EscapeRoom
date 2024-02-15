@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26af8f70290272946a1eaca83b0f6982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: 0210c1127dd754ced9c723f73428cc1c, type: 3}
+  bgmClip: {fileID: 8300000, guid: 658271ccc40b73441960796b79ab5700, type: 3}
   volumBGM: 0.5
   volumSE: 0.5
   mouseSensitivity: 0.5

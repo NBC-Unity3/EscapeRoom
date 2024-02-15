@@ -15,7 +15,7 @@ public class SettingManager : MonoBehaviour
     private ObjectPool objectPool;
  
     [Range(0f, 1f)] public float volumBGM = 0.5f;
-    [Range(0f, 1f)] public float volumSE = 0.5f;
+    [Range(0.1f, 1f)] public float volumSE = 0.5f;
 
     public float mouseSensitivity = 0.5f;
 
