@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e41df317ae7c84a9352a750c906779, type: 3}
   m_Name: Book_Sample1
   m_EditorClassIdentifier: 
-  displayName: Sample Book Title
-  description: Sample Book Description
+  displayName: "\uB3C4\uC5B4\uB77D\uC758 \uBE44\uBC00\uBC88\uD638"
+  description: "\uB3C4\uC5B4\uB77D\uC758 \uBE44\uBC00\uBC88\uD638\uAC00 \uC801\uD600\uC788\uB294
+    \uCC45\uC774\uB2E4."
   type: 2
   icon: {fileID: 21300000, guid: 03bf9648780b29b4e899ca9c97c3dbe9, type: 3}
   dropPrefab: {fileID: 100000, guid: cba00f75539bc564fabb9136fccfac6c, type: 3}
