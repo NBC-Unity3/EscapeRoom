@@ -379,7 +379,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4054248132939286121}
   - component: {fileID: 5602771948985107855}
-  - component: {fileID: 2425479026964692268}
   - component: {fileID: 3990647252039969616}
   - component: {fileID: 22803998412326205}
   - component: {fileID: 7551580972477535320}
@@ -423,22 +422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorLock: {fileID: 4209128221570685506}
-  player: {fileID: 0}
-  isLocked: 1
-  IsOpen: 0
---- !u!114 &2425479026964692268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6571918005317929930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cae39622d04e8a4fb01e8b491877d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLock: {fileID: 0}
   player: {fileID: 0}
   isLocked: 1
   IsOpen: 0

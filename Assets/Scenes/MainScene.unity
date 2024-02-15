@@ -7577,6 +7577,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6795307109034166036, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: elevatorOpenClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 54d4dbbfa65681d40a80e4319134de71, type: 3}
+    - target: {fileID: 6795307109034166036, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: elevatorCloseClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ac33b87e26b22f43bb8177b33c932ba, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8448,6 +8456,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5602771948985107855, guid: 65a8e22ace0329b4883245a0e4e7e6f0, type: 3}
+      propertyPath: openClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ac33b87e26b22f43bb8177b33c932ba, type: 3}
+    - target: {fileID: 5602771948985107855, guid: 65a8e22ace0329b4883245a0e4e7e6f0, type: 3}
+      propertyPath: closeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 54d4dbbfa65681d40a80e4319134de71, type: 3}
+    - target: {fileID: 5602771948985107855, guid: 65a8e22ace0329b4883245a0e4e7e6f0, type: 3}
+      propertyPath: unlockClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dd532fdb2a61e4cc5bc727f3b32a69a8, type: 3}
     - target: {fileID: 6571918005317929930, guid: 65a8e22ace0329b4883245a0e4e7e6f0, type: 3}
       propertyPath: m_Name
       value: DoubleDoor
