@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3859136185956919071}
   - component: {fileID: 1349799396829487080}
   - component: {fileID: 1524553732007754116}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ Transform:
   m_Children:
   - {fileID: 2551064313261557702}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6813707758152695865
 MonoBehaviour:
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmanager: {fileID: 0}
   DoorState: 0
-  DoorLock: 0
+  DoorLock: 1
   openClip: {fileID: 8300000, guid: 4b66f0c5f1c594a6e9d91b86f719108c, type: 3}
   closeClip: {fileID: 8300000, guid: 0210c1127dd754ced9c723f73428cc1c, type: 3}
   lockedClip: {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
