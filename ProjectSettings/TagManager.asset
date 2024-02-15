@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DoorKey
   - ChestKey
+  - Magnet
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Item
   - Chest
   - Elevator
-  - 
+  - Environment
   - 
   - 
   - 

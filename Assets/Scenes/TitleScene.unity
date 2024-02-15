@@ -1611,9 +1611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: 658271ccc40b73441960796b79ab5700, type: 3}
-  volumBGM: 0.5
-  volumSE: 0.5
-  mouseSensitivity: 0.5
+  volumBGM: 0.1
+  volumSE: 0.2
+  mouseSensitivity: 0.25
   interactionKey: 101
 --- !u!82 &2144558931
 AudioSource:
