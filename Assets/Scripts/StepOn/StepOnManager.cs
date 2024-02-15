@@ -5,7 +5,10 @@ using UnityEngine;
 using Random = System.Random;
 
 public class StepOnManager : MonoBehaviour
-{   
+{
+    [SerializeField] private GameObject keyPrefab;
+    [SerializeField] private GameObject dropPoint;
+
     public static StepOnManager instance;
     GameObject padGroup;
     ActionPad[] pads;
@@ -79,6 +82,8 @@ public class StepOnManager : MonoBehaviour
                 return false;
             }
         }
+
+        DropTargetKey();
         Debug.Log("compare is true!!"); // 정답 시 호출할 메소드 자리
         return true;
     }
@@ -106,5 +111,10 @@ public class StepOnManager : MonoBehaviour
             pads[q.Dequeue()].ShowColor();
             yield return delay;
         }
+    }
+
+    public void DropTargetKey()
+    {
+        Instantiate(keyPrefab, dropPoint.transform.position, Quaternion.Euler(Vector3.one * UnityEngine.Random.value * 360f));
     }
 }
