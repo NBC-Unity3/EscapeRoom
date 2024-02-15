@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ElevatorDoorState: 0
   ElevatorFloor: 1
-  elevatorClip: {fileID: 8300000, guid: ac5da0944e6824ac3b49a8e93e7bb499, type: 3}
+  elevatorClip: {fileID: 8300000, guid: 5af105e8a3a17e2498beeb4c601a5919, type: 3}
   elevatorCloseClip: {fileID: 8300000, guid: eadbb8778b57f544394b176b87c5952b, type: 3}
   elevatorOpenClip: {fileID: 8300000, guid: 6c740fb0e6fa43f4a92a6e8d333a4c46, type: 3}
 --- !u!54 &6321506532232639814
