@@ -41,7 +41,7 @@ public class InteractionManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxCheckDistance, layerMask))
             {
-                if (hit.collider.gameObject.layer != environmentLayer && hit.collider.gameObject != curInteractGameobject)
+                if (hit.collider.gameObject.layer != environmentLayer) //&& hit.collider.gameObject != curInteractGameobject
                 {
                     curInteractGameobject = hit.collider.gameObject;
                     curInteractable = hit.collider.GetComponent<IInteractable>();

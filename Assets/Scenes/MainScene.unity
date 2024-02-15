@@ -7668,6 +7668,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Size.z
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Center.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162580982472653832, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
+      propertyPath: m_Center.z
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6795307109034166036, guid: e1eee625a99d1c547b6557fb3c05765f, type: 3}
       propertyPath: elevatorOpenClip
       value: 
