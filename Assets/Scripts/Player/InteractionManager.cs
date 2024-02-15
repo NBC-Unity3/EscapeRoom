@@ -13,7 +13,7 @@ public class InteractionManager : MonoBehaviour
     public LayerMask layerMask;
 
     GameObject curInteractGameobject;
-    IInteractable curInteractable;
+    public IInteractable curInteractable;
 
     public TextMeshProUGUI prompText;
     Camera camera;
@@ -54,6 +54,9 @@ public class InteractionManager : MonoBehaviour
 
     private void SetPromptText()
     {
+        if (curInteractable == null)
+            return;
+
         prompText.gameObject.SetActive(true);
         prompText.text = $"<b>[E]</b> {curInteractable.GetInteractPrompt()}";
     }
