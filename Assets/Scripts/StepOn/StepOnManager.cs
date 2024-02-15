@@ -117,6 +117,10 @@ public class StepOnManager : MonoBehaviour
 
         while (q.Count > 0)
         {
+            if (correctClip)
+            {
+                SettingManager.PlayClip(correctClip);
+            }
             pads[q.Dequeue()].ShowColor();
             yield return delay;
         }
