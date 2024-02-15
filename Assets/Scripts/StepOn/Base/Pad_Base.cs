@@ -5,10 +5,13 @@ public class Pad_Base : MonoBehaviour
 {
     protected int playerLayer;
 
-    protected Vector3 initScale;
-    protected Vector3 pressed;
+    protected Vector3 initPos;
+    protected Vector3 pressedPos;
     protected bool isPressed = false;
     public Color color = Color.white;
+
+    public MoveType moveType = MoveType.Y;
+    public MoveDirection moveDirecion = MoveDirection.minus;
 
     protected void Awake()
     {
@@ -18,23 +21,36 @@ public class Pad_Base : MonoBehaviour
     protected virtual void Init()
     {
         playerLayer = LayerMask.NameToLayer("Player");
-        initScale = transform.localScale;
+        initPos = transform.position;
 
-        pressed = new Vector3(initScale.x, .01f, initScale.z);
+        int dir = (int)moveDirecion;
+        switch (moveType)
+        {
+            case MoveType.X:
+                pressedPos = new Vector3(.2f * dir, 0, 0);
+                break;
+            case MoveType.Y:
+                pressedPos = new Vector3(0, .2f * dir, 0);
+                break;
+            case MoveType.Z:
+                pressedPos = new Vector3(0, 0, .2f * dir);
+                break;
+        }
+        pressedPos = initPos + pressedPos;
 
         Reset();
     }
 
     public virtual void Reset()
     {
-        transform.DOScale(initScale, 1);
+        transform.DOLocalMove(initPos, 1);
         isPressed = false;
         ResetColor();
     }
 
     protected virtual void Press()
     {
-        transform.DOScale(pressed, 1);
+        transform.DOLocalMove(pressedPos, 1);
         isPressed = true;
         ChangeColor();
     }
