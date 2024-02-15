@@ -8,13 +8,12 @@ using UnityEngine.UI;
 
 public class GameManager : SingletoneBase<GameManager>
 {
+    GameObject fadePrefab;
     GameObject fadeObj;
 
     public override void Init()
     {
-        GameObject fadePrefab = Resources.Load<GameObject>("Prefabs/Fade_Canvas");
-        fadeObj = Instantiate(fadePrefab, UIManager.Instance.UIObject.transform);
-        fadeObj.SetActive(false);
+        fadePrefab = Resources.Load<GameObject>("Prefabs/Fade_Canvas");
     }
 
     public void Ending()
@@ -25,6 +24,9 @@ public class GameManager : SingletoneBase<GameManager>
 
     public void FadeOut()
     {
+        if (fadeObj == null)
+            fadeObj = Instantiate(fadePrefab, UIManager.Instance.UIObject.transform);
+
         fadeObj.SetActive(true);
         fadeObj.GetComponentInChildren<Image>().DOFade(1, 2f);
     }
