@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e41df317ae7c84a9352a750c906779, type: 3}
   m_Name: Book_Sample2
   m_EditorClassIdentifier: 
-  displayName: Sample Book2 Title
-  description: Sample Book2 Description
+  displayName: "\uD0C8\uCD9C \uD78C\uD2B8"
+  description: "\uD0C8\uCD9C \uD78C\uD2B8\uAC00 \uC801\uD600\uC788\uB294 \uCC45\uC774"
   type: 2
   icon: {fileID: 21300000, guid: 133752acb276ec146beee540c1a2b30f, type: 3}
   dropPrefab: {fileID: 100000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 3}
