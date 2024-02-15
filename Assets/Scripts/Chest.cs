@@ -26,7 +26,7 @@ public class Chest : MonoBehaviour, IInteractable
             if (ChestState == false)
                 return $"상자 열기";
             else
-                return null;
+                return "??";
         }
 
     }
