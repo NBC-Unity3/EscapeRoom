@@ -16,6 +16,9 @@ public class StepOnManager : MonoBehaviour
     Queue<int> solutionKey;
     Queue<int> inputKey;
 
+    public AudioClip correctClip;
+    public AudioClip wrongClip;
+
     bool isClear = false;
 
     private void Awake()
@@ -78,13 +81,19 @@ public class StepOnManager : MonoBehaviour
             if (!checkQueue.Dequeue().Equals(inputKey.Dequeue()))
             {
                 Invoke(nameof(ResetPads), 1);
-                Debug.Log("compare is false!!");
+                if (wrongClip)
+                {
+                    SettingManager.PlayClip(wrongClip);
+                }
                 return false;
             }
         }
 
         DropTargetKey();
-        Debug.Log("compare is true!!"); // 정답 시 호출할 메소드 자리
+        if (correctClip)
+        {
+            SettingManager.PlayClip(correctClip);
+        }
         return true;
     }
 
