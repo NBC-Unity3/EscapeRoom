@@ -31,7 +31,6 @@ public class GameManager : SingletoneBase<GameManager>
 
     void LoadEndingScene()
     {
-        //SceneManager.LoadScene(Scene Name);
-        Debug.Log("Ending");
+        SceneManager.LoadScene("EndingScene");
     }
 }
